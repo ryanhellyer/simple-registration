@@ -89,8 +89,8 @@ class Simple_Registration {
 		$content = '';
 
 		// Add error messages
-		if ( isset( $_POST['simple-registration-invalid-username'] ) && '1' === $_POST['simple-registration-invalid-username'] ) {
-			$this->error_messages[] = '<strong>' . esc_html__( 'Error: ', 'src' ) . '</strong> ' . esc_html__( 'The username entered was not valid.', 'src' );
+		if ( isset( $_POST['simple-registration-invalid-username'] ) ) {
+			$this->error_messages[] = '<strong>' . esc_html__( 'Error: ', 'src' ) . '</strong> ' . esc_html__( 'The username entered does not exist.', 'src' );
 			$this->errors['username'] = true;
 		}
 		if ( isset( $this->error_messages ) ) {  //wp_kses_post( 
@@ -152,7 +152,7 @@ class Simple_Registration {
 				<input name="simple-registration-no" class="simple-registration-no" type="submit" value="' . esc_html__( 'No, I was just trying to log in', 'simple-registration' ) . '" />';
 		} else {
 
-			if ( isset( $_POST['simple-registration-invalid-username'] ) && '1' === $_POST['simple-registration-invalid-username'] ) {
+			if ( isset( $_POST['simple-registration-invalid-username'] ) ) {
 				$submit_text = __( 'Login', 'simple-registration' );
 			} else {
 				$submit_text = __( 'Login / Register', 'simple-registration' );
