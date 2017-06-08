@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Simple Regstration
+Plugin Name: Simple Registration
 Plugin URI: https://geek.hellyer.kiwi/plugins/simple-registration/
 Description: Simple Regstration
 Version: 1.0
